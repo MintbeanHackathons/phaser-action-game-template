@@ -1,4 +1,5 @@
 const world = require("../world");
+const Phaser = require("Phaser");
 
 const ACCELERATION = 50;
 
@@ -23,4 +24,14 @@ module.exports = function update() {
   if (down.isDown) {
     player.down();
   }
+
+  this.input.on("pointerdown", function (pointer) {
+    const bullet = this.scene.add.bullet(player.x, player.y);
+    this.scene.physics.add.existing(bullet);
+
+    // const angle = Phaser.Math.Angle.Between(this.x, this.y, pointer.x, pointer.y);
+    // bullet.
+
+    this.scene.physics.moveToObject(bullet, pointer, 2000);
+  });
 };

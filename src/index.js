@@ -4,12 +4,17 @@ const preload = require("./lifecycle/preload");
 const update = require("./lifecycle/update");
 
 // factories
-require("./factories/index.js");
+require("./objects/Ball.js");
+require("./objects/Bullet.js");
+require("./objects/Wall.js");
+
+// constants
+const { width, height } = require("./constants");
 
 var config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
+  width,
+  height,
   scene: {
     preload,
     create,
