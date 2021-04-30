@@ -6,7 +6,6 @@ const update = require("./lifecycle/update");
 // factories
 require("./objects/Ball.js");
 require("./objects/Bullet.js");
-require("./objects/Wall.js");
 
 // constants
 const { width, height } = require("./constants");

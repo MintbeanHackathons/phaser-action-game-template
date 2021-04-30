@@ -2,18 +2,22 @@ const world = require("../world");
 const { width, height } = require("../constants");
 
 module.exports = function create() {
-  // spawn walls
-  const walls = [
-    this.add.wall(0, 0, width, 10), // top wall
-    this.add.wall(0, width, 10, height), // right wall
-    this.add.wall(0, height, width, 10), // bottom wall
-    this.add.wall(0, 0, 10, height), // left wall
-  ].forEach((wall) => this.physics.add.existing(wall));
-
   // spawn player
   const player = this.add.ball(300, 400, 30, 30, 0xffffff);
   world.player = this.physics.add.existing(player);
 
-  // walls
+  // set target
+  const target = this.add.ball(
+    Math.random() * width,
+    Math.random() * height,
+    30,
+    30,
+    0xff0000
+  );
+  world.target = this.physics.add.existing(target);
+  target.body.setVelocityX(Math.random() * 1000);
+  target.body.setVelocityY(Math.random() * 500);
+
+  // set walls
   this.physics.world.setBounds(0, 0, width, height);
 };

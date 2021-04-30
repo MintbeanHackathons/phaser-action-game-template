@@ -32,8 +32,10 @@ class Ball extends Phaser.GameObjects.Ellipse {
     this.body.setVelocityY(this.body.velocity.y + ACCELERATION);
   }
 
-  fire(x, y) {
-    const bullet = this.scene.add.bullet(this.x, this.y, x, y);
+  shoot(target) {
+    const bullet = this.scene.add.bullet(this, target);
+    this.scene.physics.add.existing(bullet);
+    // const bullet = this.scene.add.bullet(this.x, this.y, x, y);
   }
 }
 

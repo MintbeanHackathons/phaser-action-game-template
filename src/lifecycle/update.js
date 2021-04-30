@@ -26,12 +26,6 @@ module.exports = function update() {
   }
 
   this.input.on("pointerdown", function (pointer) {
-    const bullet = this.scene.add.bullet(player.x, player.y);
-    this.scene.physics.add.existing(bullet);
-
-    // const angle = Phaser.Math.Angle.Between(this.x, this.y, pointer.x, pointer.y);
-    // bullet.
-
-    this.scene.physics.moveToObject(bullet, pointer, 2000);
+    player.shoot(pointer);
   });
 };
