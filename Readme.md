@@ -107,9 +107,9 @@ var config = {
   width: 800,
   height: 600,
   scene: {
-    preload: () => {},
-    create: () => {},
-    update: () => {},
+    preload: function () {},
+    create: function () {},
+    update: function () {},
   },
 };
 
