@@ -19,7 +19,7 @@ PhaserJS is a desktop and mobile JavaScript game framework. It's built on top of
 and WebGL. It features preloading, physics, sprites, animations, particles, sound,
 tilemaps, a plugin system, mobile browser support, and more.
 
-### FAQ: Why should I learn game development?
+## FAQ: Why should I learn game development?
 
 Video games make for excellent portfolio pieces. Making a video game lets you
 prove your talent for coding and and your ability to solve real-world problems.
@@ -30,7 +30,7 @@ The ability to build a video game is also one of the most satisfying parts of be
 software developer. Being able to interact with a world you've built can create a
 passion for coding and genuine interest in software development.
 
-### FAQ: Should I use React? Can I use create-react-app?
+## FAQ: Should I use React? Can I use create-react-app?
 
 I would not recommend mixing React and PhaserJS. They have very different ways
 of working, and it can be difficult to get the two working well together.
