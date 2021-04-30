@@ -1,7 +1,10 @@
 const Phaser = require("phaser");
-const create = require("./create");
-const preload = require("./preload");
-const update = require("./update");
+const create = require("./lifecycle/create");
+const preload = require("./lifecycle/preload");
+const update = require("./lifecycle/update");
+
+// factories
+require("./factories/index.js");
 
 var config = {
   type: Phaser.AUTO,
